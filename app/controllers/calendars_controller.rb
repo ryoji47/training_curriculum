@@ -34,7 +34,7 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
-
+      
       wday_num = Date.today.wday# wdayメソッドを用いて取得した数値
       wday_num = wday_num + x# wday_num = Date.today.wday + x という形に38、39の式をまとめることも出来る
       if wday_num >= 7#「wday_numが7以上の場合」という条件式
